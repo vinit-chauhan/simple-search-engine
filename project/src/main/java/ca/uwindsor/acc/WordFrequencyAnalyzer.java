@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class WordFrequencyAnalyzer {
-    public Map<String, Integer> calculateWordFrequency(List<String> words) {
+    public static Map<String, Integer> calculateWordFrequency(List<String> words) {
         Map<String, Integer> wordFrequency = new HashMap<>();
         for (String word : words) {
             wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);

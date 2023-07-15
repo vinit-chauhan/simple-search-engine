@@ -14,6 +14,7 @@ public class WebPage {
     public WebPage(String url, List<String> words) {
         this.url = url;
         this.words = words;
+        this.wordFrequency = WordFrequencyAnalyzer.calculateWordFrequency(words);
     }
 
     public String getUrl() {

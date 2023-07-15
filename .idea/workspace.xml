@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9033fe00-950e-41fa-a72a-edf0aec9c4cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/TempRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebScraper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/test/java/ca/uwindsor/acc/WebScraperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/InverseIndexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/test/java/ca/uwindsor/acc/InverseIndexerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WordFrequencyAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WordFrequencyAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,6 +47,7 @@
     "code.cleanup.on.save": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "last_opened_file_path": "/home/vinit/code/github.com/vinit-chauhan/uwindsor-acc-project",
@@ -56,6 +60,11 @@
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -66,9 +75,9 @@
       <recent name="ca.uwindsor.acc" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebScraperTest">
-    <configuration name="TempRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.TempRunner" />
+  <component name="RunManager" selected="Application.Runner">
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.Runner" />
       <module name="project" />
       <extension name="coverage">
         <pattern>
@@ -80,8 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebScraperApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.WebScraperApp" />
+    <configuration name="InverseIndexerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <extension name="coverage">
         <pattern>
@@ -89,6 +97,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ca.uwindsor.acc" />
+      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.InverseIndexerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InverseIndexerTest.buildInverseIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ca.uwindsor.acc" />
+      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.InverseIndexerTest" />
+      <option name="METHOD_NAME" value="buildInverseIndex" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,19 +135,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Runner" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <configuration name="WordFrequencyAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ca.uwindsor.acc" />
+      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.WordFrequencyAnalyzerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.InverseIndexerTest" />
+        <item itemvalue="JUnit.InverseIndexerTest.buildInverseIndex" />
+        <item itemvalue="JUnit.WordFrequencyAnalyzerTest" />
         <item itemvalue="JUnit.WebScraperTest" />
-        <item itemvalue="Application.WebScraperApp" />
-        <item itemvalue="Application.TempRunner" />
-        <item itemvalue="Java Scratch.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689266317300</updated>
       <workItem from="1689266318484" duration="2837000" />
-      <workItem from="1689269164286" duration="4219000" />
+      <workItem from="1689269164286" duration="20034000" />
     </task>
     <servers />
   </component>

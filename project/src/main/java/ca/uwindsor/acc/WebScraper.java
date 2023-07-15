@@ -11,7 +11,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class WebScraper {
-    private static final List<String> STOP_WORDS = Arrays.asList("a", "an", "the", "is", "are", "was", "were", "and", "or", "of");
+    private static final List<String> STOP_WORDS = Arrays.asList(
+            "a", "an", "the", "is", "are", "was", "were", "and", "or", "of", ":", "-"
+    );
 
     public String readHTMLFromURL(String website) throws IOException {
         Document doc = Jsoup.connect(website).get();
