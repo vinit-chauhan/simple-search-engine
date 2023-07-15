@@ -1,43 +1,50 @@
 package ca.uwindsor.acc;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.io.PrintStream;
 import java.util.List;
-import java.util.SortedMap;
+import java.util.Scanner;
 
 public class Runner {
-    public static void main(String[] args) {
-        String[] websites = {
-                "https://javarevisited.blogspot.com/2017/04/difference-between-priorityqueue-and-treeset-in-java.html",
-                "https://en.wikipedia.org/wiki/Set_(abstract_data_type)#Language_support",
-                "https://www.geeksforgeeks.org/difference-between-priorityqueue-and-treeset/"
-        };
+    private static final Scanner scanner = Context.getInput();
+    private static final PrintStream out = Context.getOutput();
+    private static boolean initialRun = true;
 
-        WebScraper scraper = new WebScraper();
-        List<WebPage> webPages = new ArrayList<>();
+    public static void run() {
 
-        for (String website : websites) {
-            try {
-                String html = scraper.readHTMLFromURL(website);
-                List<String> words = scraper.extractWords(html);
+        Initializer.initialize();
 
-                System.out.println(words.toString());
+        while (true) {
 
-                WebPage webPage = new WebPage(website, words);
-                webPages.add(webPage);
-            } catch (IOException e) {
-                System.err.println("Failed to scrape website: " + website);
+            if (initialRun) {
+                UserInterface.showMenu(initialRun);
+                initialRun = false;
+            } else {
+                UserInterface.showMenu(initialRun);
+            }
+
+            int choice = Context.getInput().nextInt();
+            scanner.nextLine(); // Consume the newline character
+
+            switch (choice) {
+                case 1:
+                    // Search the keyword in the Inverse Index
+                    String searchTerm = UserInterface.searchKeyword(scanner);
+
+                    // Get the results
+                    List<String> urls = InverseIndexer.search(searchTerm);
+                    UserInterface.displayResultTable(urls);
+                    break;
+                case 2:
+                    UserInterface.exit();
+                    return;
+                default:
+                    out.println("Invalid choice. Please try again.");
             }
         }
 
-        for (WebPage webPage : webPages) {
-            InverseIndexer.buildInverseIndex(webPage);
-        }
+    }
 
-        SortedMap<Integer, HashSet<String>> result = InverseIndexer.getInverseIndex().get("treeset");
-
-        System.out.println(result.toString());
-
+    public static void main(String[] args) {
+        run();
     }
 }
