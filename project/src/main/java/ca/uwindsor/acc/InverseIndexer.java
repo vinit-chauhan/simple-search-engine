@@ -46,7 +46,7 @@ public class InverseIndexer {
         if (resultMap == null || resultMap.isEmpty()) {
             resultMap = new TreeMap<>();
             HashSet<String> set = new HashSet<>();
-            set.add("No results found!");
+            set.add("");
             resultMap.put(1, set);
         }
         resultMap.entrySet()

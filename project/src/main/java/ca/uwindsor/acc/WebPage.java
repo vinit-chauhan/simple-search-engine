@@ -9,7 +9,6 @@ public class WebPage {
     private final String url;
     private final List<String> words;
     private Map<String, Integer> wordFrequency;
-    private List<Map.Entry<String, Integer>> priorityWords;
 
     public WebPage(String url, List<String> words) {
         this.url = url;
@@ -29,16 +28,8 @@ public class WebPage {
         return wordFrequency;
     }
 
-    public void setWordFrequency(Map<String, Integer> wordFrequency) {
+    private void setWordFrequency(Map<String, Integer> wordFrequency) {
         this.wordFrequency = wordFrequency;
-    }
-
-    public List<Map.Entry<String, Integer>> getPriorityWords() {
-        return priorityWords;
-    }
-
-    public void setPriorityWords(List<Map.Entry<String, Integer>> priorityWords) {
-        this.priorityWords = priorityWords;
     }
 
     public List<Map.Entry<String, Integer>> getSortedWordFrequency() {

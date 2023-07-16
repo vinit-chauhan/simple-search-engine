@@ -35,7 +35,7 @@ public class Runner {
                     UserInterface.displayResultTable(urls);
                     break;
                 case 2:
-                    UserInterface.exit();
+                    UserInterface.exitMessage();
                     return;
                 default:
                     out.println("Invalid choice. Please try again.");

@@ -4,14 +4,16 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Context {
-    private static final PrintStream output = new PrintStream(System.out);
-    private static final Scanner input = new Scanner(System.in);
+    public static final String LINE_SEPARATOR = System.lineSeparator();
+
+    private static final PrintStream OUTPUT = new PrintStream(System.out);
+    private static final Scanner INPUT = new Scanner(System.in);
 
     public static PrintStream getOutput() {
-        return output;
+        return OUTPUT;
     }
 
     public static Scanner getInput() {
-        return input;
+        return INPUT;
     }
 }
