@@ -1,12 +1,16 @@
 package ca.uwindsor.acc;
 
+import ca.uwindsor.acc.util.dictionary.DictionaryLoader;
+import ca.uwindsor.acc.util.file.Reader;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Initializer {
     public static void initialize() {
-        String[] websites = FileReader.readURLList();
+        String[] websites = Reader.defaultURLList();
+        DictionaryLoader.initialize();
 
         WebScraper scraper = new WebScraper();
         List<WebPage> webPages = new ArrayList<>();

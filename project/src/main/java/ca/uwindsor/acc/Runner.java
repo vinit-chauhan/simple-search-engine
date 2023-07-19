@@ -31,7 +31,7 @@ public class Runner {
                     String searchTerm = UserInterface.searchKeyword(scanner);
 
                     // Get the results
-                    List<String> urls = InverseIndexer.search(searchTerm);
+                    List<String> urls = Finder.search(searchTerm);
                     UserInterface.displayResultTable(urls);
                     break;
                 case 2:

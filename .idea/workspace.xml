@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9033fe00-950e-41fa-a72a-edf0aec9c4cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Tokenizer.java" afterDir="false" />
+    <list default="true" id="9033fe00-950e-41fa-a72a-edf0aec9c4cc" name="Changes" comment="Added english dictionary to get nearby results for the search-term. Re-organized the code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Context.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/InverseIndexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/InverseIndexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/WebScraper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -51,7 +46,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "/home/vinit/code/github.com/vinit-chauhan/uwindsor-acc-project",
+    "last_opened_file_path": "/run/media/vinit/extras/code/github.com/vinit-chauhan/uwindsor-acc-project/project/src/main/java/ca/uwindsor/acc/util",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,8 +64,16 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/util" />
+      <recent name="$PROJECT_DIR$/project/utilities" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/src/main/resources/dictionaries" />
+      <recent name="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/util/dictionary" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ca.uwindsor.acc" />
@@ -82,7 +85,7 @@
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="PATTERN" value="ca.uwindsor.acc.util.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,7 +98,7 @@
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="PATTERN" value="ca.uwindsor.acc.util.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +110,7 @@
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="PATTERN" value="ca.uwindsor.acc.util.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,7 +125,7 @@
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="PATTERN" value="ca.uwindsor.acc.util.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,7 +141,7 @@
       <module name="project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.uwindsor.acc.*" />
+          <option name="PATTERN" value="ca.uwindsor.acc.util.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,12 +171,42 @@
       <option name="presentableId" value="Default" />
       <updated>1689266317300</updated>
       <workItem from="1689266318484" duration="2837000" />
-      <workItem from="1689269164286" duration="30736000" />
+      <workItem from="1689269164286" duration="32031000" />
+      <workItem from="1689646304231" duration="389000" />
+      <workItem from="1689653806860" duration="599000" />
+      <workItem from="1689654433676" duration="599000" />
+      <workItem from="1689796228397" duration="58000" />
+      <workItem from="1689796780411" duration="8577000" />
     </task>
+    <task id="LOCAL-00001" summary="update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1689537784085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689537784085</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added english dictionary to get nearby results for the search-term. Re-organized the code.">
+      <option name="closed" value="true" />
+      <created>1689810276890</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689810276890</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.list" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="Added english dictionary to get nearby results for the search-term. Re-organized the code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added english dictionary to get nearby results for the search-term. Re-organized the code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

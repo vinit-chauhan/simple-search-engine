@@ -14,16 +14,16 @@ public class InverseIndexer {
 
             // Setup TreeMap for (Frequency, set[url])
             if (inverseIndex.get(word) == null) {
-                treeMap = new TreeMap<Integer, HashSet<String>>(Collections.reverseOrder());
+                treeMap = new TreeMap<>(Collections.reverseOrder());
                 inverseIndex.put(word, treeMap);
             } else {
                 treeMap = inverseIndex.get(word);
             }
 
-            // Initialize the set of urls if does not exist already else return existing set.
+            // Initialize the set of urls if it does not exist already else return existing set.
             HashSet<String> set = treeMap.get(wordFrequency.getValue());
             if (set == null) {
-                set = new HashSet<String>();
+                set = new HashSet<>();
             }
             set.add(webPage.getUrl());
 
@@ -35,9 +35,8 @@ public class InverseIndexer {
         return inverseIndex;
     }
 
-    public static List<String> search(String searchTerm) {
+    public static List<String> find(String searchTerm) {
         List<String> searchHits = new ArrayList<>();
-
         SortedMap<Integer, HashSet<String>> resultMap = InverseIndexer
                 .getInverseIndex()
                 .get(searchTerm);
@@ -53,9 +52,7 @@ public class InverseIndexer {
                 .stream()
                 .limit(10)
                 .collect(Collectors.toSet())
-                .forEach(e -> {
-                    searchHits.addAll(e.getValue());
-                });
+                .forEach(e -> searchHits.addAll(e.getValue()));
         return searchHits;
     }
 
