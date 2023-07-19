@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class UserInterface {
-    private static final int CONSOLE_LENGTH = 60;
+    private static final int CONSOLE_LENGTH = 120;
 
     static String searchKeyword(Scanner scanner) {
         System.out.print("Enter the search keyword: ");
@@ -40,58 +40,58 @@ public class UserInterface {
 
         // Create the result table and header rows
         addLine(CONSOLE_LENGTH, resultTable);
-        addRowWithText(CONSOLE_LENGTH, "Search Results", resultTable);
+        addRowWithText("Search Results", resultTable);
         addLine(CONSOLE_LENGTH, resultTable);
-        addRowWithText(CONSOLE_LENGTH, "URL", resultTable);
+        addRowWithText("URL", resultTable);
         addLine(CONSOLE_LENGTH, resultTable);
 
         // Add URLs in the result table
-        addResult(CONSOLE_LENGTH, results, resultTable);
+        addResult(results, resultTable);
         addLine(CONSOLE_LENGTH, resultTable);
 
         return resultTable.toString();
     }
 
     private static void addLine(int length, StringBuilder sb) {
-        sb.append("+-" + "-".repeat(length) + "-+").append(Context.LINE_SEPARATOR);
+        sb.append("+-").append("-".repeat(length)).append("-+").append(Context.LINE_SEPARATOR);
     }
 
-    private static void addResult(int length, List<String> results, StringBuilder sb) {
+    private static void addResult(List<String> results, StringBuilder sb) {
         for (String url : results) {
 
-            if (url == "") {
-                addRowWithText(length, "No results found!", sb);
+            if (url.equals("")) {
+                addRowWithText("No results found!", sb);
                 continue;
             }
 
-            List<String> wrappedLines = wrapUrl(url, length);
+            List<String> wrappedLines = wrapUrl(url);
             for (String line : wrappedLines) {
-                addResultLine(length, line, sb);
+                addResultLine(line, sb);
             }
 
         }
     }
 
-    private static void addResultLine(int length, String text, StringBuilder sb) {
-        sb.append(String.format("| %-" + length + "s |%n", text));
+    private static void addResultLine(String text, StringBuilder sb) {
+        sb.append(String.format("| * %-" + (UserInterface.CONSOLE_LENGTH - 2) + "s |%n", text));
     }
 
-    private static void addRowWithText(int length, String text, StringBuilder sb) {
+    private static void addRowWithText(String text, StringBuilder sb) {
         sb.append("| ")
-                .append(" ".repeat((length - text.length()) / 2))
+                .append(" ".repeat((UserInterface.CONSOLE_LENGTH - text.length()) / 2))
                 .append(text)
-                // add extra space at back to make vertical line consistant in case of odd text length
-                .append(" ".repeat((length - text.length() + text.length() % 2) / 2))
+                // add extra space at back to make vertical line consistent in case of odd text length
+                .append(" ".repeat((UserInterface.CONSOLE_LENGTH - text.length() + text.length() % 2) / 2))
                 .append(" |")
                 .append(Context.LINE_SEPARATOR);
     }
 
-    private static List<String> wrapUrl(String url, int maxWidth) {
+    private static List<String> wrapUrl(String url) {
         List<String> wrappedLines = new ArrayList<>();
         int length = url.length();
 
-        for (int i = 0; i < length; i += maxWidth) {
-            int endIndex = Math.min(i + maxWidth, length);
+        for (int i = 0; i < length; i += UserInterface.CONSOLE_LENGTH) {
+            int endIndex = Math.min(i + UserInterface.CONSOLE_LENGTH, length);
             wrappedLines.add(url.substring(i, endIndex));
         }
 

@@ -16,10 +16,10 @@ public class Runner {
         while (true) {
 
             if (initialRun) {
-                UserInterface.showMenu(initialRun);
+                UserInterface.showMenu(true);
                 initialRun = false;
             } else {
-                UserInterface.showMenu(initialRun);
+                UserInterface.showMenu(false);
             }
 
             int choice = Context.getInput().nextInt();

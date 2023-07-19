@@ -10,7 +10,7 @@ public class Tokenizer {
     );
 
     // Add support for Nearest words.
-    public static boolean tokenizer(String text, List<String> words) {
+    public static void tokenizer(String text, List<String> words) {
         String[] tokens = text.split("\\W+");
         for (String token : tokens) {
             String word = token.trim();
@@ -18,7 +18,6 @@ public class Tokenizer {
                 words.add(word);
             }
         }
-        return true;
     }
 
 }
