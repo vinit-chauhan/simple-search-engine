@@ -1,4 +1,4 @@
-package ca.uwindsor.acc.processor.dictionary;
+package ca.uwindsor.acc.dictionary;
 
 import ca.uwindsor.acc.util.edit_distance.Sequences;
 

@@ -1,9 +1,9 @@
 package ca.uwindsor.acc;
 
+import ca.uwindsor.acc.dictionary.DictionaryLoader;
 import ca.uwindsor.acc.fetcher.WebScraper;
 import ca.uwindsor.acc.model.WebPage;
 import ca.uwindsor.acc.processor.InverseIndexer;
-import ca.uwindsor.acc.processor.dictionary.DictionaryLoader;
 import ca.uwindsor.acc.util.file.Reader;
 
 import java.io.IOException;

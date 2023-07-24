@@ -1,6 +1,6 @@
 package ca.uwindsor.acc.processor;
 
-import ca.uwindsor.acc.processor.dictionary.CloseWordsFinder;
+import ca.uwindsor.acc.dictionary.CloseWordsFinder;
 import ca.uwindsor.acc.util.arrays.Cleanup;
 
 import java.util.HashSet;
