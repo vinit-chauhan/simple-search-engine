@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9033fe00-950e-41fa-a72a-edf0aec9c4cc" name="Changes" comment="Added english dictionary to get nearby results for the search-term. Re-organized the code.">
+    <list default="true" id="9033fe00-950e-41fa-a72a-edf0aec9c4cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/InverseIndexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/InverseIndexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Runner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +59,7 @@
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT",
       "PLAIN_TEXT"
     ]
   }
@@ -80,8 +81,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Runner">
-    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.Runner" />
+    <configuration name="Output" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.ui.Output" />
       <module name="project" />
       <extension name="coverage">
         <pattern>
@@ -93,8 +94,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.UserInterface" />
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.uwindsor.acc.Runner" />
       <module name="project" />
       <extension name="coverage">
         <pattern>
@@ -155,7 +156,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Runner" />
-        <item itemvalue="Application.UserInterface" />
+        <item itemvalue="Application.Output" />
         <item itemvalue="JUnit.InverseIndexerTest" />
         <item itemvalue="JUnit.InverseIndexerTest.buildInverseIndex" />
         <item itemvalue="JUnit.WordFrequencyAnalyzerTest" />
@@ -176,7 +177,10 @@
       <workItem from="1689653806860" duration="599000" />
       <workItem from="1689654433676" duration="599000" />
       <workItem from="1689796228397" duration="58000" />
-      <workItem from="1689796780411" duration="8577000" />
+      <workItem from="1689796780411" duration="9407000" />
+      <workItem from="1689867235172" duration="2444000" />
+      <workItem from="1690140931605" duration="131000" />
+      <workItem from="1690219862307" duration="4164000" />
     </task>
     <task id="LOCAL-00001" summary="update workspace.xml">
       <option name="closed" value="true" />
@@ -194,7 +198,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689810276890</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added english dictionary to get nearby results for the search-term. Re-organized the code.">
+      <option name="closed" value="true" />
+      <created>1689810360194</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689810360194</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added english dictionary to get nearby results for the search-term. Re-organized the code.">
+      <option name="closed" value="true" />
+      <created>1689810370437</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689810370437</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

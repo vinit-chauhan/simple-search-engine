@@ -1,5 +1,6 @@
-package ca.uwindsor.acc;
+package ca.uwindsor.acc.fetcher;
 
+import ca.uwindsor.acc.processor.Tokenizer;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

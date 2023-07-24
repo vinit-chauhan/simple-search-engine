@@ -1,4 +1,6 @@
-package ca.uwindsor.acc;
+package ca.uwindsor.acc.processor;
+
+import ca.uwindsor.acc.model.WebPage;
 
 import java.util.*;
 import java.util.stream.Collectors;

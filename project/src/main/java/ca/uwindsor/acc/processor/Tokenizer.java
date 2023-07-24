@@ -1,4 +1,4 @@
-package ca.uwindsor.acc;
+package ca.uwindsor.acc.processor;
 
 import java.util.Arrays;
 import java.util.List;

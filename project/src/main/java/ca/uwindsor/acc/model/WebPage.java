@@ -1,4 +1,6 @@
-package ca.uwindsor.acc;
+package ca.uwindsor.acc.model;
+
+import ca.uwindsor.acc.processor.WordFrequencyAnalyzer;
 
 import java.util.ArrayList;
 import java.util.Comparator;
