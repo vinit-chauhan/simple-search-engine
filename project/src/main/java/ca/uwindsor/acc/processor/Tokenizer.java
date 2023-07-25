@@ -11,7 +11,7 @@ public class Tokenizer {
 
     // Add support for Nearest words.
     public static void tokenizer(String text, List<String> words) {
-        String[] tokens = text.split("\\W+");
+        String[] tokens = text.split("[< \n.:,]+");
         for (String token : tokens) {
             String word = token.trim();
             if (word.length() > 0 && !IGNORE_WORDS.contains(word)) {

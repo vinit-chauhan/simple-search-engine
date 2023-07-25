@@ -22,7 +22,8 @@ public class WebScraper {
         Elements elements = doc.body().select("*");
         for (Element element : elements) {
             String text = element.ownText().toLowerCase();
-            Tokenizer.tokenizer(text, words);
+            if (!text.isEmpty() && !text.isBlank())
+                Tokenizer.tokenizer(text, words);
         }
         return words;
     }

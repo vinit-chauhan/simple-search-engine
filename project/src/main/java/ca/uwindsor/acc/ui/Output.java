@@ -2,6 +2,7 @@ package ca.uwindsor.acc.ui;
 
 import ca.uwindsor.acc.Context;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,24 +10,26 @@ import java.util.List;
 public class Output {
     private static final int CONSOLE_LENGTH = 120;
 
+    private static final PrintStream out = Context.getOutput();
+
     public static void exitMessage() {
-        System.out.println("Thank you for using the Doogle CLI. Goodbye!");
+        out.println("Thank you for using the" + Context.APP_NAME + " CLI. Goodbye!");
     }
 
     public static void showMenu(boolean isInitialRun) {
         if (isInitialRun) {
-            System.out.println("Welcome to the Doogle CLI!");
-            System.out.println("1. Enter a search keyword (Exact Search)");
-            System.out.println("2. Enter a search keyword (Fuzzy Search)");
+            out.println("Welcome to the " + Context.APP_NAME + " CLI!");
+            out.println("1. Enter a search keyword (Exact Search)");
+            out.println("2. Enter a search keyword (Fuzzy Search)");
         } else {
             // Display the options after the search
-            System.out.println("Search completed.");
-            System.out.println("1. Retry search (Exact Search)");
-            System.out.println("2. Retry search (Fuzzy Search)");
+            out.println("Search completed.");
+            out.println("1. Retry search (Exact Search)");
+            out.println("2. Retry search (Fuzzy Search)");
         }
 
-        System.out.println("0. Exit");
-        System.out.print("Enter your choice: ");
+        out.println("0. Exit");
+        out.print("Enter your choice: ");
     }
 
     public static void displayResultTable(List<String> results) {

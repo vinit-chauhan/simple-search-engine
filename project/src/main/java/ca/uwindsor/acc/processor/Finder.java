@@ -18,7 +18,7 @@ public class Finder {
             Set<String> resultSet = new HashSet<>();
 
             // Find the list of all the close words for the given search term.
-            List<String> closeWords = CloseWordsFinder.closeWords(searchTerm, 1);
+            List<String> closeWords = CloseWordsFinder.closeWords(searchTerm, 2);
 
             closeWords.forEach(word -> resultSet.addAll(
                     Cleanup.clean(InverseIndexer.find(word))
