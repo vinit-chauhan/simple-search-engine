@@ -1,7 +1,7 @@
 package ca.uwindsor.acc.processor;
 
 import ca.uwindsor.acc.dictionary.CloseWordsFinder;
-import ca.uwindsor.acc.util.arrays.Cleanup;
+import ca.uwindsor.acc.util.Arrays;
 
 import java.util.HashSet;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Finder {
     public static List<String> search(String searchTerm, boolean isExactMatch) {
         if (isExactMatch) {
             // Returns list of exact search matches
-            return Cleanup.clean(InverseIndexer.find(searchTerm));
+            return Arrays.clean(InverseIndexer.find(searchTerm));
         } else {
             // set is used to remove the duplicate entries for closeWords.
             Set<String> resultSet = new HashSet<>();
@@ -21,7 +21,7 @@ public class Finder {
             List<String> closeWords = CloseWordsFinder.closeWords(searchTerm, 2);
 
             closeWords.forEach(word -> resultSet.addAll(
-                    Cleanup.clean(InverseIndexer.find(word))
+                    Arrays.clean(InverseIndexer.find(word))
             ));
             return resultSet.stream().toList();
         }
