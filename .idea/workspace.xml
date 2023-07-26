@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9033fe00-950e-41fa-a72a-edf0aec9c4cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/resources/ingest/urls.list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/dictionary/CloseWordsFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/dictionary/CloseWordsFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/fetcher/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/fetcher/WebScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/processor/Finder.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/processor/Finder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/processor/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/processor/Tokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/ui/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/ca/uwindsor/acc/ui/Output.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +46,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
+    "last.edited.regexp": "6472328265",
     "last_opened_file_path": "/run/media/vinit/extras/code/github.com/vinit-chauhan/uwindsor-acc-project/project/src/main/java/ca/uwindsor/acc/util",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -188,7 +182,8 @@
       <workItem from="1689867235172" duration="2444000" />
       <workItem from="1690140931605" duration="131000" />
       <workItem from="1690219862307" duration="6158000" />
-      <workItem from="1690299144997" duration="6017000" />
+      <workItem from="1690299144997" duration="8469000" />
+      <workItem from="1690385366399" duration="4281000" />
     </task>
     <task id="LOCAL-00001" summary="update workspace.xml">
       <option name="closed" value="true" />
