@@ -37,7 +37,7 @@ public class InverseIndexer {
         return inverseIndex;
     }
 
-    public static List<String> find(String searchTerm) {
+    public static List<String> search(String searchTerm) {
         List<String> searchHits = new ArrayList<>();
         SortedMap<Integer, HashSet<String>> resultMap = InverseIndexer
                 .getInverseIndex()

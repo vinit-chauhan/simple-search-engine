@@ -12,7 +12,7 @@ public class Finder {
     public static List<String> search(String searchTerm, boolean isExactMatch) {
         if (isExactMatch) {
             // Returns list of exact search matches
-            return Arrays.clean(InverseIndexer.find(searchTerm));
+            return Arrays.clean(InverseIndexer.search(searchTerm));
         } else {
             // set is used to remove the duplicate entries for closeWords.
             Set<String> resultSet = new HashSet<>();
@@ -21,7 +21,7 @@ public class Finder {
             List<String> closeWords = CloseWordsFinder.closeWords(searchTerm, 2);
 
             closeWords.forEach(word -> resultSet.addAll(
-                    Arrays.clean(InverseIndexer.find(word))
+                    Arrays.clean(InverseIndexer.search(word))
             ));
             return resultSet.stream().toList();
         }
