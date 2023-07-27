@@ -24,18 +24,17 @@ public class Initializer {
         }
 
         DictionaryLoader.initialize();
-
-        WebScraper scraper = new WebScraper();
         List<WebPage> webPages = new ArrayList<>();
+
 
         for (String website : websites) {
             try {
-                String html = scraper.readHTMLFromURL(website.trim());
-                List<String> words = scraper.extractWords(html);
+                String html = WebScraper.readHTMLFromURL(website.trim());
+                List<String> words = WebScraper.extractWords(html);
                 localDictionary.addAll(words);
                 WebPage webPage = new WebPage(website, words);
                 webPages.add(webPage);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 System.err.println("Failed to scrape website: " + website);
             }
         }
