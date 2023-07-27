@@ -29,15 +29,11 @@ public class Initializer {
         List<WebPage> webPages = new ArrayList<>();
 
         for (String website : websites) {
-            try {
-                String html = scraper.readHTMLFromURL(website.trim());
-                List<String> words = scraper.extractWords(html);
-                localDictionary.addAll(words);
-                WebPage webPage = new WebPage(website, words);
-                webPages.add(webPage);
-            } catch (IOException e) {
-                System.err.println("Failed to scrape website: " + website);
-            }
+            String html = WebScraper.readHTMLFromURL(website.trim());
+            List<String> words = WebScraper.extractWords(html);
+            localDictionary.addAll(words);
+            WebPage webPage = new WebPage(website, words);
+            webPages.add(webPage);
         }
 
         for (WebPage webPage : webPages) {
