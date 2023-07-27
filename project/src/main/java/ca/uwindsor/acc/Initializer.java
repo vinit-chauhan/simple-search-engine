@@ -24,8 +24,6 @@ public class Initializer {
         }
 
         DictionaryLoader.initialize();
-
-        WebScraper scraper = new WebScraper();
         List<WebPage> webPages = new ArrayList<>();
 
 
