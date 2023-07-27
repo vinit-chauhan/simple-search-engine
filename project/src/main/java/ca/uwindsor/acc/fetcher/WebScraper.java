@@ -62,7 +62,6 @@ public class WebScraper {
                 directory.mkdirs();
             }
             File f = new File("convertedWebPages/" + newTitle + ".txt"); // create text file in convertedWebPages
-            System.out.println(f);
             // folder
             f.createNewFile();
             PrintWriter pw = new PrintWriter(f);
