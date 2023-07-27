@@ -13,7 +13,7 @@ public class Output {
     private static final PrintStream out = Context.getOutput();
 
     public static void exitMessage() {
-        out.println("Thank you for using the" + Context.APP_NAME + " CLI. Goodbye!");
+        out.println("Thank you for using the " + Context.APP_NAME + " CLI. Goodbye!");
     }
 
     public static void showMenu(boolean isInitialRun) {
