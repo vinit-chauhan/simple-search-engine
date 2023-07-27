@@ -28,12 +28,17 @@ public class Initializer {
         WebScraper scraper = new WebScraper();
         List<WebPage> webPages = new ArrayList<>();
 
+
         for (String website : websites) {
-            String html = WebScraper.readHTMLFromURL(website.trim());
-            List<String> words = WebScraper.extractWords(html);
-            localDictionary.addAll(words);
-            WebPage webPage = new WebPage(website, words);
-            webPages.add(webPage);
+            try {
+                String html = WebScraper.readHTMLFromURL(website.trim());
+                List<String> words = WebScraper.extractWords(html);
+                localDictionary.addAll(words);
+                WebPage webPage = new WebPage(website, words);
+                webPages.add(webPage);
+            } catch (Exception e) {
+                System.err.println("Failed to scrape website: " + website);
+            }
         }
 
         for (WebPage webPage : webPages) {
